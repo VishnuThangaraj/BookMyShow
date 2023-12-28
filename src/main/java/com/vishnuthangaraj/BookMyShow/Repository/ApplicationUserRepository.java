@@ -11,6 +11,6 @@ import java.util.UUID;
 public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, UUID> {
 
     // Get the User by Email
-    @Query(value = "select * from -- where email =:email", nativeQuery = true)
+    @Query(value = "select * from application_user where email =:email", nativeQuery = true)
     public ApplicationUser getUserByEmail(String email);
 }
